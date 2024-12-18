@@ -1,0 +1,8 @@
+# Dirsearch started Tue Nov  5 21:29:05 2024 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://greenhorn.htb:3000/ -i 200,302,403
+
+200     1KB  http://greenhorn.htb:3000/.well-known/openid-configuration
+200   206B   http://greenhorn.htb:3000/.well-known/security.txt
+200   706B   http://greenhorn.htb:3000/api/swagger
+200    16KB  http://greenhorn.htb:3000/explore/repos
+200   287B   http://greenhorn.htb:3000/sitemap.xml
+200    11KB  http://greenhorn.htb:3000/user/login/
